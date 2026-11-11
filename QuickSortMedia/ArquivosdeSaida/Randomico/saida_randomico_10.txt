@@ -1,0 +1,13 @@
+Tipo de entrada: randomico
+Tamanho: 10
+Dados ordenados:
+4565
+23455
+590202
+599294
+633601
+717834
+756010
+759776
+806477
+988409

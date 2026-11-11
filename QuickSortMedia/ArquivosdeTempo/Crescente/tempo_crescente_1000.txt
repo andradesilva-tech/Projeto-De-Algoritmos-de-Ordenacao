@@ -1,0 +1,12 @@
+=== ANALISE DE PERFORMANCE - QUICK SORT (PIVO: MEDIA) ===
+Tipo de entrada: crescente
+Tamanho do array: 1000
+Tempo de execucao: 0.0000 segundos
+
+=== INFORMACOES SOBRE COMPLEXIDADE ===
+Quick Sort - Pivo: elemento do meio (media dos indices)
+Melhor caso: O(n log n)
+Caso medio: O(n log n)
+Pior caso: O(n^2)
+Espaco: O(log n) - pilha de recursao
+Nota: Pivo do meio evita o pior caso em entradas ja ordenadas ou invertidas
