@@ -1,0 +1,7 @@
+=== ANALISE DE PERFORMANCE - INSERTION SORT ===
+Tipo de entrada: randomico
+Tamanho do array: 10
+Tempo de execucao: 0.0000 segundos
+
+=== INFORMACOES SOBRE COMPLEXIDADE ===
+Caso medio (aleatorio): O(n^2)

@@ -1,0 +1,9 @@
+# configurações do VS Code (não sobem)
+.vscode/
+# executáveis e objetos gerados pelo compilador
+*.exe
+*.o
+*.obj
+*.out
+# este script de envio
+subir_projeto.sh

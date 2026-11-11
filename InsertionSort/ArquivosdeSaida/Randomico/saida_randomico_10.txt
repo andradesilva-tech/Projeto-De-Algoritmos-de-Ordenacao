@@ -1,0 +1,13 @@
+Tipo de entrada: randomico
+Tamanho: 10
+Dados ordenados:
+1037
+1602
+2015
+3485
+3541
+6211
+9209
+13110
+28545
+31865

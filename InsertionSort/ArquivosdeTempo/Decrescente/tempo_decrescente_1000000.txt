@@ -1,0 +1,7 @@
+=== ANALISE DE PERFORMANCE - INSERTION SORT ===
+Tipo de entrada: decrescente
+Tamanho do array: 1000000
+Tempo de execucao: 1238.3920 segundos
+
+=== INFORMACOES SOBRE COMPLEXIDADE ===
+Pior caso (ordem inversa): O(n^2)
