@@ -1,0 +1,13 @@
+Tipo de entrada: randomico
+Tamanho: 10
+Dados:
+13545
+30178
+11084
+23871
+24386
+9810
+27594
+1431
+2817
+3588

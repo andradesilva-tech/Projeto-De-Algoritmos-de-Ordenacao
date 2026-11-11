@@ -1,0 +1,8 @@
+=== ANALISE DE PERFORMANCE - SHELL SORT ===
+Tipo de entrada: decrescente
+Tamanho do array: 1000000
+Tempo de execucao: 0.0920 segundos
+
+=== INFORMACOES SOBRE COMPLEXIDADE ===
+Shell Sort - Sequencia de gaps original (n/2, n/4, ...)
+Nota: O algoritmo nao possui analise de complexidade

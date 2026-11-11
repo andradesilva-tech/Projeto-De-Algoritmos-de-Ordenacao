@@ -1,0 +1,8 @@
+=== ANALISE DE PERFORMANCE - SHELL SORT ===
+Tipo de entrada: randomico
+Tamanho do array: 100
+Tempo de execucao: 0.0000 segundos
+
+=== INFORMACOES SOBRE COMPLEXIDADE ===
+Shell Sort - Sequencia de gaps original (n/2, n/4, ...)
+Nota: O algoritmo nao possui analise de complexidade
