@@ -1,0 +1,7 @@
+=== ANALISE DE PERFORMANCE - BUBBLE SORT ===
+Tipo de entrada: randomico
+Tamanho do array: 100000
+Tempo de execucao: 27.4310 segundos
+
+=== INFORMACOES SOBRE COMPLEXIDADE ===
+Caso medio (aleatorio): O(n�)

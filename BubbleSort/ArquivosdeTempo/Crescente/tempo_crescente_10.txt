@@ -1,0 +1,7 @@
+=== ANALISE DE PERFORMANCE - BUBBLE SORT ===
+Tipo de entrada: crescente
+Tamanho do array: 10
+Tempo de execucao: 0.0000 segundos
+
+=== INFORMACOES SOBRE COMPLEXIDADE ===
+Melhor caso (ja ordenado): O(n) - com otimizacao

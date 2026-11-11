@@ -1,0 +1,13 @@
+Tipo de entrada: randomico
+Tamanho: 10
+Dados ordenados:
+398
+1486
+3528
+4258
+7391
+16078
+17096
+23144
+23349
+28548

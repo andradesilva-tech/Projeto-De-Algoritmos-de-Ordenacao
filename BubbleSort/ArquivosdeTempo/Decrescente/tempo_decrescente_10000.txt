@@ -1,0 +1,7 @@
+=== ANALISE DE PERFORMANCE - BUBBLE SORT ===
+Tipo de entrada: decrescente
+Tamanho do array: 10000
+Tempo de execucao: 0.3440 segundos
+
+=== INFORMACOES SOBRE COMPLEXIDADE ===
+Pior caso (ordem inversa): O(n�)
