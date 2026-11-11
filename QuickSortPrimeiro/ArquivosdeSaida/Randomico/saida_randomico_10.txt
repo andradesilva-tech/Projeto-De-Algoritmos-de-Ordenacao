@@ -1,0 +1,13 @@
+Tipo de entrada: randomico
+Tamanho: 10
+Dados ordenados:
+3186
+6116
+81456
+128295
+443525
+559776
+765164
+785011
+813681
+940059

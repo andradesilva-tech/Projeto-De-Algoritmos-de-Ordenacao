@@ -1,0 +1,12 @@
+=== ANALISE DE PERFORMANCE - QUICK SORT (PIVO: PRIMEIRO) ===
+Tipo de entrada: crescente
+Tamanho do array: 1000000
+Tempo de execucao: 307.1930 segundos
+
+=== INFORMACOES SOBRE COMPLEXIDADE ===
+Quick Sort - Pivo: primeiro elemento
+Melhor caso: O(n log n)
+Caso medio: O(n log n)
+Pior caso: O(n^2) - ocorre em vetores ja ordenados ou invertidos
+Espaco: O(log n) - pilha de recursao
+Nota: Pivo fixo no primeiro elemento degenera para O(n^2) em entradas ja ordenadas
