@@ -1,0 +1,13 @@
+Tipo de entrada: randomico
+Tamanho: 10
+Dados ordenados:
+91532
+149457
+391926
+410443
+462599
+646322
+710682
+719311
+864396
+904876

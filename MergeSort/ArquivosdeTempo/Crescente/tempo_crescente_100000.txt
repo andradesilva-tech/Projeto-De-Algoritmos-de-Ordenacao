@@ -1,0 +1,12 @@
+=== ANALISE DE PERFORMANCE - MERGE SORT ===
+Tipo de entrada: crescente
+Tamanho do array: 100000
+Tempo de execucao: 0.0320 segundos
+
+=== INFORMACOES SOBRE COMPLEXIDADE ===
+Merge Sort - Algoritmo Dividir e Conquistar
+Melhor caso: O(n log n)
+Caso medio: O(n log n)
+Pior caso: O(n log n)
+Espaco: O(n) - necessita arrays auxiliares
+Nota: Algoritmo estavel que mantem a ordem relativa de elementos iguais
