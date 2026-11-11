@@ -1,0 +1,12 @@
+=== ANALISE DE PERFORMANCE - SELECTION SORT ===
+Tipo de entrada: decrescente
+Tamanho do array: 10
+Tempo de execucao: 0.0000 segundos
+
+=== INFORMACOES SOBRE COMPLEXIDADE ===
+Selection Sort - Complexidade constante para todos os casos
+Melhor caso: O(n�)
+Caso medio: O(n�)
+Pior caso: O(n�)
+Espaco: O(1) - algoritmo in-place
+Nota: Sempre faz o mesmo numero de comparacoes, independente da entrada
