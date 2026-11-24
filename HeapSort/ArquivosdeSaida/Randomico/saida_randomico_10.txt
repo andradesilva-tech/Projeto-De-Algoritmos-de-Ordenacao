@@ -1,0 +1,13 @@
+Tipo de entrada: randomico
+Tamanho: 10
+Dados ordenados (heap minimo - ordem decrescente):
+992169
+986844
+954172
+755241
+706988
+651181
+554456
+370285
+45485
+23151

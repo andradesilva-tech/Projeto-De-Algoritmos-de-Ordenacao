@@ -162,7 +162,7 @@ double mergeSortTempo(int tamanho, int array[]) {
     return tempoGasto;
 }
 
-// ========== QUICK SORT - VERS�O 1: PIV� PRIMEIRO ELEMENTO ==========
+// ========== QUICK SORT - VERSAO 1: PIVO PRIMEIRO ELEMENTO ==========
 
 int partitionPrimeiro(int array[], int baixo, int alto) {
     int pivo = array[baixo];
@@ -266,5 +266,175 @@ double quickSortMediaTempo(int tamanho, int array[]) {
     double tempoGasto = ((double)(end - begin)) / CLOCKS_PER_SEC;
     return tempoGasto;
 }
+// ========== HEAP SORT (MINIMO) ==========
+// Vetor indexado a partir de 0: pai(i) = (i-1)/2, esquerda(i) = 2i+1, direita(i) = 2i+2.
+// Heap minimo: todo pai e menor ou igual aos seus filhos, entao o menor fica na raiz.
+
+// MIN_HEAPIFY: desce o elemento da posicao i ate restaurar o heap minimo. O(log n)
+void minHeapify(int array[], int tamanho, int i) {
+    int menor = i;
+    int esquerda = 2 * i + 1;
+    int direita = 2 * i + 2;
+
+    if (esquerda < tamanho && array[esquerda] < array[menor])
+        menor = esquerda;
+
+    if (direita < tamanho && array[direita] < array[menor])
+        menor = direita;
+
+    if (menor != i) {
+        int temp = array[i];
+        array[i] = array[menor];
+        array[menor] = temp;
+
+        minHeapify(array, tamanho, menor);
+    }
+}
+
+// BUILD_MIN_HEAP: chama o MIN_HEAPIFY do ultimo no interno ate a raiz. O(n)
+void buildMinHeap(int array[], int tamanho) {
+    for (int i = tamanho / 2 - 1; i >= 0; i--)
+        minHeapify(array, tamanho, i);
+}
+
+// HEAPSORT (minimo): leva o menor elemento (raiz) para o final a cada passo,
+// por isso o vetor termina em ordem DECRESCENTE. O(n log n)
+void heapSortMin(int array[], int tamanho) {
+    buildMinHeap(array, tamanho);
+
+    for (int i = tamanho - 1; i > 0; i--) {
+        // Move a raiz (menor elemento) para o final
+        int temp = array[0];
+        array[0] = array[i];
+        array[i] = temp;
+
+        // Restaura o heap minimo na parte que ainda nao foi ordenada
+        minHeapify(array, i, 0);
+    }
+}
+
+double heapSortTempo(int tamanho, int array[]) {
+    clock_t begin = clock();
+
+    heapSortMin(array, tamanho);
+
+    clock_t end = clock();
+    double tempoGasto = ((double)(end - begin)) / CLOCKS_PER_SEC;
+    return tempoGasto;
+}
+
+// ========== OPERACOES DE MIN HEAP (FILA DE PRIORIDADE MINIMA) ==========
+// Reaproveita o minHeapify e o buildMinHeap do HeapSort.
+
+class MinHeap {
+private:
+    int* heap;
+    int capacidade;
+    int tamanhoAtual;
+
+    int pai(int i) { return (i - 1) / 2; }
+
+public:
+    MinHeap(int cap) {
+        capacidade = cap;
+        tamanhoAtual = 0;
+        heap = new int[capacidade];
+    }
+
+    ~MinHeap() {
+        delete[] heap;
+    }
+
+    void buildMinHeap(int arr[], int n) {
+        if (n > capacidade) {
+            cout << "Erro: Tamanho excede capacidade!" << endl;
+            return;
+        }
+
+        tamanhoAtual = n;
+        for (int i = 0; i < n; i++)
+            heap[i] = arr[i];
+
+        ::buildMinHeap(heap, tamanhoAtual);
+    }
+
+    // HEAP_MINIMUM: o menor elemento esta na raiz. O(1)
+    // Use estaVazio() antes: com o heap vazio o -1 e so uma protecao,
+    // pois -1 tambem pode ser uma chave valida.
+    int heapMinimum() {
+        if (tamanhoAtual == 0) {
+            return -1;
+        }
+        return heap[0];
+    }
+
+    // HEAP_EXTRACT_MIN: retira a raiz, coloca o ultimo no lugar e
+    // chama o MIN_HEAPIFY a partir do primeiro indice. O(log n)
+    // Use estaVazio() antes (mesmo motivo do heapMinimum).
+    int heapExtractMin() {
+        if (tamanhoAtual == 0) {
+            return -1;
+        }
+
+        int raiz = heap[0];
+        heap[0] = heap[tamanhoAtual - 1];
+        tamanhoAtual--;
+        minHeapify(heap, tamanhoAtual, 0);
+
+        return raiz;
+    }
+
+    // HEAP_INCREASE_KEY: aumenta a chave da posicao i. No heap minimo uma chave
+    // maior so pode ficar maior que os filhos, entao o elemento desce. O(log n)
+    bool heapIncreaseKey(int i, int chave) {
+        if (i < 0 || i >= tamanhoAtual) {
+            cout << "Erro: posicao invalida!" << endl;
+            return false;
+        }
+        if (chave < heap[i]) {
+            cout << "Erro: nova chave menor que a chave atual!" << endl;
+            return false;
+        }
+
+        heap[i] = chave;
+        minHeapify(heap, tamanhoAtual, i);
+        return true;
+    }
+
+    // MAX_HEAP_INSERT (versao minimo): coloca a chave numa nova folha e
+    // sobe enquanto ela for menor que o pai. O(log n)
+    void minHeapInsert(int chave) {
+        if (tamanhoAtual == capacidade) {
+            cout << "Erro: Heap cheio!" << endl;
+            return;
+        }
+
+        tamanhoAtual++;
+        int i = tamanhoAtual - 1;
+        heap[i] = chave;
+
+        while (i > 0 && heap[pai(i)] > heap[i]) {
+            int temp = heap[i];
+            heap[i] = heap[pai(i)];
+            heap[pai(i)] = temp;
+            i = pai(i);
+        }
+    }
+
+    void imprimirHeap() {
+        cout << "[ ";
+        for (int i = 0; i < tamanhoAtual; i++)
+            cout << heap[i] << " ";
+        cout << "]";
+    }
+
+    int getTamanho() {
+        return tamanhoAtual;
+    }
+
+    bool estaVazio() {
+        return tamanhoAtual == 0;
+    }
+};
 
 #endif

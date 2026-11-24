@@ -28,6 +28,7 @@ int main(){
     criarPastaMergeSort();
     criarPastaQuickSortPrimeiro();
     criarPastaQuickSortMedia();
+    criarPastaHeapSort();
 
     do{
         menu();
@@ -38,10 +39,37 @@ int main(){
             cout << "O programa foi finalizado" << endl;
             limparTela();
             exit(0);
-        } else if(algoritmo < 0 || algoritmo > 7) { 
-            cout << "Opcao invalida! Use valores de 0 a 7 ou 0 para sair." << endl;
+        } else if(algoritmo < 0 || algoritmo > 9) {
+            cout << "Opcao invalida! Use valores de 0 a 9 ou 0 para sair." << endl;
             cout << "Pressione Enter para continuar...";
             cin.get();
+            limparTela();
+            continue;
+        }
+
+        if(algoritmo == 9) {
+            int opcaoOperacao;
+            do {
+                limparTela();
+                menuOperacoesHeap();
+                cin >> opcaoOperacao;
+                cin.ignore();
+
+                if(opcaoOperacao >= 0 && opcaoOperacao <= 4) {
+                    limparTela();
+                    OperacoesMinHeap(opcaoOperacao);
+
+                    if(opcaoOperacao != 0) {
+                        cout << "\nPressione Enter para continuar...";
+                        cin.get();
+                    }
+                } else {
+                    cout << "Opcao invalida!" << endl;
+                    cout << "Pressione Enter para continuar...";
+                    cin.get();
+                }
+            } while(opcaoOperacao != 0);
+
             limparTela();
             continue;
         }
@@ -106,7 +134,11 @@ int main(){
             cout << "Processando Quick Sort (Pivo: Media)..." << endl;
             cout << "Criando arquivos..." << endl << endl;
             QuickSortMedia(tamanhoIns, entrada);
-        } 
+        }else if(algoritmo == 8) {
+            cout << "Processando Heap Sort (Minimo)..." << endl;
+            cout << "Criando arquivos..." << endl << endl;
+            HeapSort(tamanhoIns, entrada);
+        }
 
         cout << endl << "Processamento concluido!" << endl;
         cout << "Pressione Enter para continuar...";

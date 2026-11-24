@@ -18,12 +18,23 @@ void menu(){
     cout<<"| 5-Merge Sort                                                                 |"<<endl;
     cout<<"| 6-Quick Sort (Pivo: Primeiro)                                                |"<<endl;
     cout<<"| 7-Quick Sort (Pivo: Media)                                                   |"<<endl;
+    cout<<"| 8-Heap Sort (Minimo)                                                         |"<<endl;
+    cout<<"| 9-Operacoes Heap (Fila de Prioridade Minima)                                 |"<<endl;
     cout<<"| 0-Sair                                                                       |"<< endl;
     cout<<"|==============================================================================|"<<endl;
     cout<<"Informe o algoritmo: "<<endl;
 
 }
 
+void menuOperacoesHeap(){
+    cout<<"\n=== OPERACOES DE MIN HEAP ===" << endl;
+    cout<<"| 1-HEAP_MINIMUM" << endl;
+    cout<<"| 2-HEAP_EXTRACT_MIN" << endl;
+    cout<<"| 3-HEAP_INCREASE_KEY (chave 1000 na posicao escolhida)" << endl;
+    cout<<"| 4-MAX_HEAP_INSERT (inserir 1000)" << endl;
+    cout<<"| 0-Voltar ao menu principal" << endl;
+    cout<<"| Informe a operacao: ";
+}
 
 void tipoEntrada(){
     cout<<"|=========================TIPO ENTRADA=========================|"<< endl;
@@ -49,3 +60,4 @@ void tamanho(){
 }
 
 #endif
+

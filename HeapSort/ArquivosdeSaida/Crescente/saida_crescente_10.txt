@@ -1,0 +1,13 @@
+Tipo de entrada: crescente
+Tamanho: 10
+Dados ordenados (heap minimo - ordem decrescente):
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0

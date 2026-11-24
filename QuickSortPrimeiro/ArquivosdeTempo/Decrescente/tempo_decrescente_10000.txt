@@ -1,7 +1,7 @@
 === ANALISE DE PERFORMANCE - QUICK SORT (PIVO: PRIMEIRO) ===
 Tipo de entrada: decrescente
 Tamanho do array: 10000
-Tempo de execucao: 0.0230 segundos
+Tempo de execucao: 0.1380 segundos
 
 === INFORMACOES SOBRE COMPLEXIDADE ===
 Quick Sort - Pivo: primeiro elemento

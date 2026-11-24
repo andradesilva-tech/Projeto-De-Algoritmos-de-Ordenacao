@@ -1,0 +1,13 @@
+=== ANALISE DE PERFORMANCE - HEAP SORT (MINIMO) ===
+Tipo de entrada: decrescente
+Tamanho do array: 1000
+Tempo de execucao: 0.0000 segundos
+
+=== INFORMACOES SOBRE COMPLEXIDADE ===
+Heap Sort - Heap minimo (BUILD_MIN_HEAP + MIN_HEAPIFY), saida decrescente
+Melhor caso: O(n log n)
+Caso medio: O(n log n)
+Pior caso: O(n log n)
+Espaco: O(log n) - pilha da recursao do minHeapify; nao usa vetor auxiliar
+Nota: Desempenho consistente para todos os tipos de entrada
+      Nao e estavel (pode mudar a ordem de elementos iguais)

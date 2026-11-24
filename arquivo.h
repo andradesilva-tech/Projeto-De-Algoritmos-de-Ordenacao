@@ -34,14 +34,14 @@ void createDiretorio(const string& path) {
     }
 }
 
-// Fun��o auxiliar para criar a estrutura completa de um algoritmo
+// Funcao auxiliar para criar a estrutura completa de um algoritmo
 void criarEstruturaCompleta(const string& nomeAlgoritmo) {
     cout << "Criando estrutura de diretorios para " << nomeAlgoritmo << "..." << endl;
 
     // Criar pasta principal
     createDiretorio(nomeAlgoritmo);
 
-    // Criar pastas de Entrada, Sa�da e Tempo
+    // Criar pastas de Entrada, Saida e Tempo
     createDiretorio(nomeAlgoritmo + "/ArquivosdeEntrada");
     createDiretorio(nomeAlgoritmo + "/ArquivosdeSaida");
     createDiretorio(nomeAlgoritmo + "/ArquivosdeTempo");
@@ -51,7 +51,7 @@ void criarEstruturaCompleta(const string& nomeAlgoritmo) {
     createDiretorio(nomeAlgoritmo + "/ArquivosdeEntrada/Decrescente");
     createDiretorio(nomeAlgoritmo + "/ArquivosdeEntrada/Randomico");
 
-    // Criar subpastas dentro de Sa�da
+    // Criar subpastas dentro de Saida
     createDiretorio(nomeAlgoritmo + "/ArquivosdeSaida/Crescente");
     createDiretorio(nomeAlgoritmo + "/ArquivosdeSaida/Decrescente");
     createDiretorio(nomeAlgoritmo + "/ArquivosdeSaida/Randomico");
@@ -92,5 +92,8 @@ void criarPastaQuickSortMedia() {
     criarEstruturaCompleta("QuickSortMedia");
 }
 
+void criarPastaHeapSort() {
+    criarEstruturaCompleta("HeapSort");
+}
 
 #endif
